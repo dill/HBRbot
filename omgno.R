@@ -12,7 +12,7 @@
 library('hbrplot')
 library(ggplot2)
 
-setwd("~/HBRbot.R")
+setwd("~/HBRbot")
 
 load("thingos.RData")
 
