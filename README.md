@@ -1,6 +1,9 @@
 `hbrbot` - a bot to make stupid graphs
 ======================================
 
+Source for [`@hbrplotbot`](https://twitter.com/hbrplotbot), which is a twitter bot that makes stupid plots like this:
+
+![a silly plot](hbrexample.png)
 
 Other people did the hard work...
 
