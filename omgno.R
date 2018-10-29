@@ -12,7 +12,7 @@
 library('hbrplot')
 library(ggplot2)
 
-setwd("~/hbrbot.R")
+setwd("~/HBRbot.R")
 
 load("thingos.RData")
 
@@ -45,6 +45,8 @@ ggsave(p, file=fn, width=8, height=8)
 
 
 post_it <- function(fn){
+  # switch account
+  fuzzy_dog0 <- system2("/usr/local/bin/twurl set default hbrplotbot")
   # how to from here:
   # https://github.com/twitter/twurl/issues/58
   fuzzy_dog <- system2("/usr/local/bin/twurl",
@@ -58,6 +60,9 @@ post_it <- function(fn){
                         paste0("\"/1.1/statuses/update.json\" -d \"media_ids=",
                                fuzzy_dog,
                                "&status=\""))
+
+  # reset default
+  fuzzy_dog0 <- system2("/usr/local/bin/twurl set default goodsdmbot")
 }
 
 post_it(fn)
