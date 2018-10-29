@@ -33,5 +33,9 @@ for(i in seq_along(big_list)){
   }
 }
 
+# add franks hats
+frank <- read.csv("frankhats.csv")
+new_list$frank <- frank$Hat
+
 thingos <- new_list
 save(thingos, file="thingos.RData")
